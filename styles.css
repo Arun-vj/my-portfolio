@@ -131,6 +131,7 @@ ul li a:hover {
   line-height: 1.5rem;
   color: var(--text-light);
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .action__btns {
@@ -220,11 +221,10 @@ ul li a:hover {
 
 .exp {
   margin: auto;
+  text-align: justify;
 
 }
-.exp p{
-  justify-content: center;  
-}
+
 .file{
   width: 25%;
 }
