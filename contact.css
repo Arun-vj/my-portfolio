@@ -1,110 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
+*,
+*:before,
+*:after{
+    padding: 0;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-
-.container{
-    min-height: 100vh;
-    background: #08071d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url("bg.png") no-repeat center center/cover;
-}
-
-.container form{
-    width: 670px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-    border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    flex-wrap: wrap;
-}
-
-.container form h1{
-    color: #a855f7;
-    font-weight: 500;
-    margin-top: 20px;
-    width: 500px;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.container form input{
-    width: 290px;
-    height: 40px;
-    padding-left: 10px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background: none;
-    border-bottom: 2px solid #fff;
-}
-
-.container form input::placeholder{
-    color: #08071d;
-}
-
-.container form #lastName,
-.container form #mobile{
-    margin-left: 20px;
-}
-
-.container form h4{
-    color: black;
-    font-weight: 300;
-    width: 600px;
-    margin-top: 20px;
-}
-
-.container form textarea{
-    background: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    color: black;
-    font-weight: 200;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 80px;
-    max-height: 80px;
-}
-
-textarea::-webkit-scrollbar{
-    width: 1em;
-}
-
-textarea::-webkit-scrollbar-thumb{
-    background-color: rgba(194,194,194,0.713);
-}
-
-.container form #button{
-    border: none;
-    background: #a855f7;;
-    border-radius: 5px;
-    margin-top: 20px;
+body{
+    background-color: #faf5ff;
+    font-family: 'Poppins',sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    font-size: 20px;
-    color: white;
-    width: 100px;
-    padding: 0;
-    margin-right: 500px;
-    margin-bottom: 30px;
-    transition: 0.3s;
+    color: #202035;
+    letter-spacing: 1.2px;
+    height: 100vh;
+    width: 100%;
 }
+form{
+    width: 450px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
+    10px 10px 15px rgba(70,70,70,0.12);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+h6{
+    margin-bottom: 10px;
+    font: inherit;
+    text-transform: uppercase;
+}
+a.submit{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
+    10px 10px 15px rgba(70,70,70,0.12);
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="textarea"]{
+    margin-bottom: 25px;
+    border: none;
+    background-color: transparent;
+    box-shadow:  inset -10px -10px 15px rgba(255,255,255,0.55),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
+    padding: 10px;
+    width: 90%;
+    border-radius: 7px;
+    outline: none;
+}
+::placeholder{
+    font-size: 12px;
+    font-weight: 500;
+    color: #ababab;
+    letter-spacing: 1.3px;
+}
+input[type="radio"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 40px;
+    width: 120px;
+    box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
+    10px 10px 15px rgba(70,70,70,0.12);
+    border: 5px solid #ececec;
+    margin-right: 30px;
+    border-radius: 30px;
+    font: inherit;
+    outline: none;
+    cursor: pointer;
+}
+input[type="radio"]:after{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: #606060;
+    letter-spacing: 0.5px;
+}
+#developer:after{
+    content: "Developer";
+}
+#designer:after{
+    content: "Designer";
+}
+input[type="radio"]:checked,
+a:active{
+    box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
+    10px 10px 15px rgba(70,70,70,0.12),
+    inset -10px -10px 15px rgba(255,255,255,0.55),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
 
-.container form #button:hover{
-    opacity: 0.7;
 }
-.icons{
-    padding-top: 10px;
+input[type="radio"]:checked:after{
+    color: #15e38a;
 }
